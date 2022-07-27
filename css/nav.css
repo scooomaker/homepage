@@ -89,49 +89,47 @@ nav .nav-item-search {
 }
 
 body[data-color-scheme="auto"] nav .nav-item-github, body[data-color-scheme="light"] nav .nav-item-github {
-    background-image: url(/theme-img/github-mark-dark.png);
+    background-image: url(../img/github-fill.svg);
 }
 
-body[data-color-scheme="auto"] nav .nav-item-patreon, body[data-color-scheme="light"] nav .nav-item-patreon {
-    background-image: url(/theme-img/patreon-logo-black.png);
+body[data-color-scheme="auto"] nav .nav-item-cloud, body[data-color-scheme="light"] nav .nav-item-cloud {
+    background-image: url(../img/cloud-fill.svg);
 }
 
-body[data-color-scheme="auto"] nav .nav-item-codepen, body[data-color-scheme="light"] nav .nav-item-codepen {
-    background-image: url(https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-Black-Large.png);
+body[data-color-scheme="auto"] nav .nav-item-book, body[data-color-scheme="light"] nav .nav-item-book {
+    background-image: url(../img/book-3-line.svg);
 }
 
-body[data-color-scheme="auto"] nav .nav-item-mastodon, body[data-color-scheme="light"] nav .nav-item-mastodon {
-    background-image: url(/theme-img/mastodon-logo-black.svg);
+body[data-color-scheme="auto"] nav .nav-item-email, body[data-color-scheme="light"] nav .nav-item-email{
+    background-image: url(../img/mail-fill.svg);
 }
 
-body[data-color-scheme="auto"] nav .nav-item-discord, body[data-color-scheme="light"] nav .nav-item-discord {
-    background-image: url(/theme-img/discord-mark-dark.svg);
+/* body[data-color-scheme="auto"] nav .nav-item-qq, body[data-color-scheme="light"] nav .nav-item-qq {
+    background-image: url(../img/qq-line.svg);
+} */
+
+body[data-color-scheme="auto"] nav .nav-item-wechat, body[data-color-scheme="light"] nav .nav-item-wechat {
+    background-image: url(../img/wechat-fill.svg);
 }
 
-body[data-color-scheme="auto"] nav .nav-item-search, body[data-color-scheme="light"] nav .nav-item-search {
-    background-image: url(/theme-img/search-dark.svg);
+body[data-color-scheme="auto"] nav .nav-item-talk, body[data-color-scheme="light"] nav .nav-item-talk {
+    background-image: url(../img/kakao-talk-fill.svg);
 }
 
-@media (prefers-color-scheme: dark) {
-    body[data-color-scheme="auto"] nav .nav-item-github {
-        background-image: url(/theme-img/github-mark-light.png);
-    }
-    body[data-color-scheme="auto"] nav .nav-item-patreon {
-        background-image: url(/theme-img/patreon-logo-white.png);
-    }
-    body[data-color-scheme="auto"] nav .nav-item-codepen {
-        background-image: url(https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-White-Large.png);
-    }
-    body[data-color-scheme="auto"] nav .nav-item-mastodon {
-        background-image: url(/theme-img/mastodon-logo-white.svg);
-    }
-    body[data-color-scheme="auto"] nav .nav-item-discord {
-        background-image: url(/theme-img/discord-mark-light.svg);
-    }
-    body[data-color-scheme="auto"] nav .nav-item-search {
-        background-image: url(/theme-img/search-light.svg);
-    }
-}
+/* body[data-color-scheme="auto"] nav .nav-item-search, body[data-color-scheme="light"] nav .nav-item-search {
+    background-image: url(#);
+} */
+
+/* delete @media (prefers-color-scheme: dark)  */
+
+
+
+
+
+
+
+
+
 
 body[data-color-scheme="dark"] nav .nav-item-github {
     background-image: url(/theme-img/github-mark-light.png);
@@ -156,6 +154,53 @@ body[data-color-scheme="dark"] nav .nav-item-discord {
 body[data-color-scheme="dark"] nav .nav-item-search {
     background-image: url(/theme-img/search-light.svg);
 }
+
+
+
+
+
+
+/* abc */
+body[data-color-scheme="dark"] nav .nav-item-github {
+    background-image: url(../img/github-fill.svg);
+    filter: invert(100%);
+}
+
+body[data-color-scheme="dark"] nav .nav-item-cloud {
+    background-image: url(../img/cloud-fill.svg);
+    filter: invert(100%);
+}
+
+body[data-color-scheme="dark"] nav .nav-item-book{
+    background-image: url(../img/book-3-line.svg);
+    filter: invert(100%);
+}
+
+body[data-color-scheme="dark"] nav .nav-item-email{
+    background-image: url(../img/mail-fill.svg);
+    filter: invert(100%);
+}
+
+/* body[data-color-scheme="dark"] nav .nav-item-qq{
+    background-image: url(../img/qq-line.svg);
+    filter: invert(100%);
+} */
+
+body[data-color-scheme="dark"] nav .nav-item-wechat{
+    background-image: url(../img/wechat-fill.svg);
+    filter: invert(100%);
+}
+
+body[data-color-scheme="dark"] nav .nav-item-talk{
+    background-image: url(../img/kakao-talk-fill.svg);
+    filter: invert(100%);
+}
+
+
+
+
+
+
 
 @media screen and (max-width: 600px) {
     nav {
