@@ -1,4 +1,18 @@
+(function () {
+    var url = new URL(location.href);
+    if (url.protocol == "https:")
+    {
+        return;
+    }
+    url.protocol = "https:";
+    location.href = url.href;
+})();
+
 (() => {
+
+    
+    
+    
     var navEl = document.getElementById('theme-nav');
     navEl.addEventListener('click', (e) => {
         if (window.innerWidth <= 600) {
@@ -155,4 +169,7 @@
             toc.after(divider)
         }
     }
+    
+    
+    
 })()
