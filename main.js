@@ -1,12 +1,12 @@
-(function () {
-    var url = new URL(location.href);
-    if (url.protocol == "https:")
-    {
-        return;
-    }
-    url.protocol = "https:";
-    location.href = url.href;
-})();
+// (function () {
+//     var url = new URL(location.href);
+//     if (url.protocol == "https:")
+//     {
+//         return;
+//     }
+//     url.protocol = "https:";
+//     location.href = url.href;
+// })();
 
 (() => {
 
@@ -41,7 +41,7 @@
         }
     })
 
-    // a simple solution for managing cookies
+    // 颜色切换
     const Cookies = new class {
         get(key, fallback) {
             const temp = document.cookie.split('; ').find(row => row.startsWith(key + '='))
@@ -55,6 +55,7 @@
             document.cookie = key + '=' + value + '; path=' + document.body.getAttribute('data-config-root')
         }
     }
+
 
     const ColorScheme = new class {
         constructor() {
@@ -84,6 +85,7 @@
         }
     }
 
+    
     if (document.getElementById('theme-color-scheme-toggle')) {
         var bodyEl = document.body
         var themeColorSchemeToggleEl = document.getElementById('theme-color-scheme-toggle')
@@ -109,67 +111,5 @@
         }
     }
 
-    if (document.body.attributes['data-rainbow-banner']) {
-        var shown = false
-        switch (document.body.attributes['data-rainbow-banner-shown'].value) {
-            case 'always':
-                shown = true
-                break;
-            case 'auto':
-                shown = new Date().getMonth() + 1 == parseInt(document.body.attributes['data-rainbow-banner-month'].value, 10)
-                break;
-            default:
-                break;
-        }
-        if (shown) {
-            var banner = document.createElement('div')
-
-            banner.style.setProperty('--gradient', `linear-gradient(90deg, ${document.body.attributes['data-rainbow-banner-colors'].value})`)
-            banner.classList.add('rainbow-banner')
-
-            navEl.after(banner)
-        }
-    }
-
-    if (document.body.attributes['data-toc']) {
-        const content = document.getElementsByClassName('content')[0]
-        const maxDepth = document.body.attributes['data-toc-max-depth'].value
-
-        var headingSelector = ''
-        for (var i = 1; i <= maxDepth; i++) {
-            headingSelector += 'h' + i + ','
-        }
-        headingSelector = headingSelector.slice(0, -1)
-        const headings = content.querySelectorAll(headingSelector)
-
-        var source = []
-        headings.forEach((heading) => {
-            source.push({
-                html: heading.innerHTML,
-                href: heading.getElementsByClassName('headerlink')[0].attributes['href'].value
-            })
-        })
-
-        const toc = document.createElement('div')
-        toc.classList.add('toc')
-        for (const i in source) {
-            const item = document.createElement('p')
-            const link = document.createElement('a')
-            link.href = source[i].href
-            link.innerHTML = source[i].html
-            link.removeChild(link.getElementsByClassName('headerlink')[0])
-            item.appendChild(link)
-            toc.appendChild(item)
-        }
-
-        if (toc.children.length != 0) {
-            document.getElementsByClassName('post')[0].getElementsByClassName('divider')[0].after(toc)
-            const divider = document.createElement('div')
-            divider.classList.add('divider')
-            toc.after(divider)
-        }
-    }
-    
-    
-    
+        
 })()
