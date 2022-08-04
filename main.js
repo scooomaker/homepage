@@ -1,12 +1,12 @@
-(function () {
-    var url = new URL(location.href);
-    if (url.protocol == "https:")
-    {
-        return;
-    }
-    url.protocol = "https:";
-    location.href = url.href;
-})();
+// (function () {
+//     var url = new URL(location.href);
+//     if (url.protocol == "https:")
+//     {
+//         return;
+//     }
+//     url.protocol = "https:";
+//     location.href = url.href;
+// })();
 
 (() => {
 
